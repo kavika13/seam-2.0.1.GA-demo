@@ -11,7 +11,7 @@ This is a tutorial for creating a Seam 2.0.1.GA web application from scratch.
 - JBoss AS 4.2 (Application Server)
 - MySql Connector 5.0.5 (Database access from Java)
 - Seam 2.0.1.GA (Web application development platform.  It includes JSF, RichFaces, Hibernate, and other things)
-- Eclipse Galileo (IDE for Java web development)
+- Eclipse Galileo SR2 (IDE for Java web development)
 - JBoss Tools 3.1 for Galileo (Plugins for ease of Seam development under Eclipse)
 
 ##Development Tool Installation
@@ -26,7 +26,7 @@ This is a tutorial for creating a Seam 2.0.1.GA web application from scratch.
   - Don't bother registering
   - Set `JAVA_HOME` environment variable
      - `My Computer` -> `Properties` -> `Advanced System Settings` -> `Environment Variables` -> `System Variables`
-     - `New` -> Variable Name: `JAVA_HOME`, Variable Value: `C:\Program Files (x86)\Java\jre6` (or similar)
+     - `New` -> Variable Name: `JAVA_HOME`, Variable Value: `C:\Program Files (x86)\Java\jdk1.6.0_32` (or similar)
 1. Install MySQL 5.0.37 - ([Direct Link](http://downloads.mysql.com/archives/mysql-5.0/mysql-essential-5.0.37-win32.msi))
   - Get from: [MySQL Archived Downloads](http://downloads.mysql.com/archives.php) -> `MySQL Database Server 5.0`  
     -> `5.0.37` -> `Microsoft Windows` -> `Microsoft Windows 32. (Windows Installer format)`
