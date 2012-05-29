@@ -1,0 +1,4 @@
+#Mon May 28 20:48:30 PDT 2012
+default.configuration=simple-bug-tracker-ejb
+eclipse.preferences.version=1
+hibernate3.enabled=true

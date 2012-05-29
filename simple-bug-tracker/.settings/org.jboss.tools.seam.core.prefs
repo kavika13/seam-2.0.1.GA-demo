@@ -1,0 +1,18 @@
+#Mon May 28 22:02:35 PDT 2012
+action.package=org.domain.simplebugtracker.session
+action.sources=/simple-bug-tracker-ejb/ejbModule
+eclipse.preferences.version=1
+model.package=org.domain.simplebugtracker.entity
+model.sources=/simple-bug-tracker-ejb/ejbModule
+seam.ear.project=simple-bug-tracker-ear
+seam.ejb.project=simple-bug-tracker-ejb
+seam.project.connection.profile=MySQL connector 5.0.5
+seam.project.deployment.type=ear
+seam.project.settings.version=1.1
+seam.project.web.root.folder=/simple-bug-tracker/view
+seam.runtime.name=jboss-seam-2.0.1.GA
+seam.settings.changed.by.user=true
+seam.test.creating=false
+seam.test.project=simple-bug-tracker
+test.package=org.domain.simplebugtracker.test
+test.sources=/simple-bug-tracker/src

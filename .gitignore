@@ -1,6 +1,17 @@
+/.metadata
+
 *.class
 
 # Package Files #
 *.jar
 *.war
 *.ear
+
+# /simple-bug-tracker/
+/simple-bug-tracker/build
+
+# /simple-bug-tracker/view/
+/simple-bug-tracker/view/WEB-INF/classes
+
+# /simple-bug-tracker-ejb/
+/simple-bug-tracker-ejb/build
