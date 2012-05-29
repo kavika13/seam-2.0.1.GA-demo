@@ -3,7 +3,7 @@ Seam 2.0.1.GA simple application tutorial
 
 This is a tutorial for creating a Seam 2.0.1.GA web application from scratch.
 
-Tools used:
+**Tools used**:
 
 - Java SE JDK 6 (Runtime framework)
 - MySql 5.0.37 (Database)
@@ -16,7 +16,7 @@ Tools used:
 
 ##Development Tool Installation
 
-Make sure you're connected to the Internet during all installation
+*Make sure you're connected to the Internet during all installation*
 
 1. Install Java SE JDK 6 for Eclipse to run on - ([Direct Link](http://download.oracle.com/otn-pub/java/jdk/6u32-b05/jdk-6u32-windows-i586.exe))
   - Get from: [Java Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)  
