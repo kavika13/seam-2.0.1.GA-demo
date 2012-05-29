@@ -3,6 +3,11 @@ Seam 2.0.1.GA simple application tutorial
 
 This is a tutorial for creating a Seam 2.0.1.GA web application from scratch.
 
+If you want to start from scratch, follow this entire file.
+
+If you want to start from existing source code, follow all the instructions here, but stop at the `Setup new Seam project` section.  
+Then follow the [Start from source](https://github.com/kavika13/seam-2.0.1.GA-demo/wiki/Start-from-source) guide on the wiki.
+
 **Tools used**:
 
 - Java SE JDK 6 (Runtime framework)
