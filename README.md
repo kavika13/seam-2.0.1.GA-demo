@@ -5,7 +5,7 @@ This is a tutorial for creating a Seam 2.0.1.GA web application from scratch.
 
 If you want to start from scratch, follow this entire file.
 
-If you want to start from existing source code, follow all the instructions here, but stop at [the Setup new Seam project` section](https://github.com/kavika13/seam-2.0.1.GA-demo#setup-new-seam-project).  
+If you want to start from existing source code, follow all the instructions here, but stop at [the Setup new Seam project section](https://github.com/kavika13/seam-2.0.1.GA-demo#setup-new-seam-project).  
 Then follow the [Start from source](https://github.com/kavika13/seam-2.0.1.GA-demo/wiki/Start-from-source) guide on the wiki.
 
 **Tools used**:
@@ -23,7 +23,7 @@ Then follow the [Start from source](https://github.com/kavika13/seam-2.0.1.GA-de
 
 *Make sure you're connected to the Internet during all installation*
 
-1. Install Java SE JDK 6 for Eclipse to run on - ([Direct Link](http://download.oracle.com/otn-pub/java/jdk/6u32-b05/jdk-6u32-windows-i586.exe))
+1. Install Java SE JDK 6 for Eclipse to run on - ([Somewhat Direct Link](http://www.oracle.com/technetwork/java/javase/downloads/jdk-6u32-downloads-1594644.html) - `jdk-6u32-windows-i586.exe`)
   - Get from: [Java Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html)  
     -> `Java SE 6` (whichever update version) -> `JDK` -> `Download` -> `Accept license agreement`  
     -> `Windows x86 (32-bit)` -> `jdk-6u32-windows-i586.exe`
@@ -64,9 +64,10 @@ Then follow the [Start from source](https://github.com/kavika13/seam-2.0.1.GA-de
     -> `Download` -> `jboss-4.2.3.GA.zip`
   - Unzip to a directory.  I'm using `C:\HappyPath\jboss-4.2.3.GA`
   - Run the `bin/run.bat` file to ensure the installation is okay.  No exceptions = good to go
-  - If there are network bind errors, you can use `netstat -ano` to see which processes are using which ports.  
-    Kill those processes.  If they are service related, you can using `services.msc` to stop them,  
-    and set their startup type to `manual` or `disabled`
+  - If there are network bind errors, you can use `netstat -ano` from the command prompt to see which processes  
+    are using which ports.  Kill those processes.  If they are service related, you can use:  
+    `Start` -> `Run` -> `services.msc`  
+    to stop them, and set their startup type to `manual` or `disabled`
   - <kbd>CTRL + C</kbd> to kill the server when you're done.
   - When it asks, type `Y` then <kbd>enter</kbd> to terminate the batch file
 1. Install MySQL Connector 5.0.5 - ([Direct Link](http://downloads.mysql.com/archives/mysql-connector-java-5.0/mysql-connector-java-5.0.5.zip))
@@ -74,7 +75,9 @@ Then follow the [Start from source](https://github.com/kavika13/seam-2.0.1.GA-de
     -> `MySQL Connector/J 5.0 (legacy)` -> `5.0.5` -> `ZIP format`
   - Extract file `mysql-connector-java-5.0.5\mysql-connector-java-5.0.5-bin.jar` to
     -> `<JBoss 4.2 Install Root>\server\default\lib\`
-1. Install SEAM 2.0.1.GA library - ? (site is down right now)
+1. Install SEAM 2.0.1.GA library - ([Direct Link](http://sourceforge.net/projects/jboss/files/JBoss Seam/2.0.1.GA/jboss-seam-2.0.1.GA.zip/download))
+  - Get from: [JBoss Seam Downloads](http://sourceforge.net/projects/jboss/files/JBoss Seam/)  
+    -> `2.0.1.GA` -> `jboss-seam-2.0.1.GA.zip`
   - Unzip to a directory.  I'm using C:\HappyPath\jboss-seam-2.0.1.GA
 1. Install supported (Galileo SR2) Eclipse IDE for EE Developers - ([Direct Link](http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/galileo/SR2/eclipse-jee-galileo-SR2-win32.zip))
   - Get from: [Eclipse Download Page](http://www.eclipse.org/downloads/) -> `Older Versions`  
@@ -99,13 +102,23 @@ Then follow the [Start from source](https://github.com/kavika13/seam-2.0.1.GA-de
     and accept all certificates
   - When asked, restart Eclipse
 
+If you have problems installing JBoss Tools, try installing them from an offline package:
+
+ - Go to [JBoss Tools Download](http://www.jboss.org/tools/download.html)
+ - At the `Downloads` section at the bottom of the page, choose `JBoss Tools 3.1 :: Eclipse 3.5.2`
+ - Unzip contents into a folder
+ - In Eclipse, go to `Help` -> `Install New Software...`
+ - Choose `Add...`
+ - Choose `Local...`
+ - Navigate to the unzipped JBoss Tools folder, and continue the installation process as prompted by Eclipse
+
 ##Setup local development database
 
 1. Open MySql Workbench
 1. Create a new schema named `bugtracker`
   - Double-click `Local instance MySQL` under `Open Connection to Start Querying`
   - Enter the `root` password you created above
-  - Click the `+` icon to `Create a new schema in the connected server`
+  - Click the `+` icon to `Create a new schema in the connected server` (gold colored, stacked cylinder icon)
   - Name it `bugtracker`, and use Collation: `Server Default` (will end up as UTF8)
   - Click `Apply` and `Apply` again on the modal dialog that runs the command
 1. Add a user named `tracker-dev`
@@ -130,6 +143,7 @@ Then follow the [Start from source](https://github.com/kavika13/seam-2.0.1.GA-de
 
 ##Setup new Seam project
 
+1. Launch Eclipse
 1. Start the wizard to create a new `Seam Web Project`
   - `File` -> `New` -> `Project...`
   - `Seam` -> `Seam Web Project`
@@ -174,6 +188,7 @@ Then follow the [Start from source](https://github.com/kavika13/seam-2.0.1.GA-de
      - URL: `jdbc:mysql://localhost:3306/bugtracker`
      - User name: `tracker-dev`
      - Password: `...` (Use the one you created for the `bugtracker-dev` user above)
+     - Click `OK`
      - Select `Save password`
      - Click `Test Connection` - This should be successful, saying `Ping succeeded!`
      - Click `Finish`
